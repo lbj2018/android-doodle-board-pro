@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">dDoodleBoardPro</string>
-    <string name="title_menu_item_clear">Clear</string>
+    <string name="app_name">Doodle Board Pro</string>
+    <string name="tip_save_album_success">Success to save your doodle work into album</string>
+    <string name="tip_save_albim_failed">Fail to save your doodle work into album</string>
 
 </resources>

@@ -1,11 +1,116 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
 
-	<com.derek.ddoodleboardpro.view.PaintView 
-	    android:id="@+id/view_paint_view"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent" />
+    <com.derek.ddoodleboardpro.view.PaintView
+        android:id="@+id/view_paint_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_green_light"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/button_new_page"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="New Page" />
+
+        <Button
+            android:id="@+id/button_pen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Pen" />
+
+        <Button
+            android:id="@+id/button_eraser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Eraser" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Save" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.derek.ddoodleboardpro.view.ColorView
+                    android:id="@+id/view_color_view_black"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.derek.ddoodleboardpro.view.ColorView
+                    android:id="@+id/view_color_view_red"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.derek.ddoodleboardpro.view.ColorView
+                    android:id="@+id/view_color_view_green"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.derek.ddoodleboardpro.view.ColorView
+                    android:id="@+id/view_color_view_gray"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.derek.ddoodleboardpro.view.ColorView
+                    android:id="@+id/view_color_view_blue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.derek.ddoodleboardpro.view.ColorView
+                    android:id="@+id/view_color_view_yellow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
 </LinearLayout>

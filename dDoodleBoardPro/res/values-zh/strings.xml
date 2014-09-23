@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">多彩涂鸦板Pro</string>
+    
+    <string name="tip_save_album_success">保存你的涂鸦作品成功</string>
+    <string name="tip_save_albim_failed">保存你得涂鸦作品失败</string>
+
+</resources>
