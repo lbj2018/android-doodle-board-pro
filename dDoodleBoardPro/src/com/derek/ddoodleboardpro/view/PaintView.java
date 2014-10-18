@@ -112,6 +112,9 @@ public class PaintView extends View {
 		}
 	}
 
+	private float mPrevX, mPrevY;
+    private static final float TOUCH_TOLERANCE = 4;
+	
 	// Touch
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -130,14 +133,27 @@ public class PaintView extends View {
 				mEraserCenter = new PointF(touchX, touchY);
 			}
 			mDrawPath.moveTo(touchX, touchY);
+			
+			mPrevX = touchX;
+			mPrevY = touchY;
+			
 			break;
 		case MotionEvent.ACTION_MOVE:
-			mDrawPath.lineTo(touchX, touchY);
+//			mDrawPath.lineTo(touchX, touchY);
 
 			// Eraser
 			if (!mPainting) {
 				mEraserCenter = new PointF(touchX, touchY);
 			}
+			
+		     float dx = Math.abs(touchX - mPrevX);
+		     float dy = Math.abs(touchY - mPrevY);
+		     if (dx >= TOUCH_TOLERANCE || dy >= TOUCH_TOLERANCE) {
+		    	 mDrawPath.quadTo(mPrevX, mPrevY, (touchX + mPrevX)/2, (touchY + mPrevY)/2);
+		    	 mPrevX = touchX;
+		    	 mPrevY = touchY;
+		     }
+			
 			break;
 		case MotionEvent.ACTION_UP:
 			mEraserCenter = null;
